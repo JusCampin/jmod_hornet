@@ -1,0 +1,44 @@
+<TruckAddon>
+	<TruckData RepairsCapacity="50" />
+	
+	<RepairsHide>
+		<Mesh Frame="afim_hornet_rear_bumper_01_repair_a" HideThreshold="0.0" />
+	</RepairsHide>
+	
+	<PhysicsModel 
+		AcceptVisualDamage="false" 
+		Mesh="trucks/tuning/afim_hornet_tuning" 
+		MeshFrame="afim_hornet_rear_bumper_01_repair_a"
+	>
+		<Body 
+			ImpactType="Truck" 
+			Mass="15" 
+			ModelFrame="BoneRearBumperSlot_cdt"
+		>
+			<Constraint Type="Fixed" LinearLimitsY="(-0.01; 0.01)" >
+				<Motor Type="Spring" Damping="150" Spring="700 " />
+			</Constraint>
+		</Body>
+	</PhysicsModel>
+	
+	<GameData
+		CameraPreset="supplies_rear"
+		Category="rear"
+		IsCustomizable="false"
+		IsConsumable="true"  
+		Price="200"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_INV_SLOT_REPAIR_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_INV_SLOT_REPAIR_NAME"
+		/>
+		
+		<RequiredAddon Types="hornet_rear_bumper_01"/>
+		
+		<InstallSocket Type="HornetRearBumperSlot02_A" />
+	</GameData>
+</TruckAddon>

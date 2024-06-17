@@ -1,0 +1,39 @@
+<TruckAddon>
+	<TruckData>
+		<Damage>
+			<Multiplier Multiplier="0.01" Type="FuelTank" />
+			<Multiplier Multiplier="0.01" Type="Suspension" />
+		</Damage>
+	</TruckData>
+	
+	<PhysicsModel 
+		AcceptVisualDamage="false"
+		Mesh="trucks/tuning/afim_hornet_tuning" 
+		MeshFrame="afim_hornet_wings_01"
+	>
+		<Body 
+			Collisions="None" 
+			Mass="10" 
+			ModelFrame="BoneAddons_cdt"
+		>
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	
+	<GameData
+		CameraPreset="side_r"
+		Category="miscellenious"
+		Price="100"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_WING_HORNET_DESC_0"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_FENDERS_DEFAULT_NAME"
+		/>
+		
+		<InstallSocket Type="HornetWings" />
+	</GameData>
+</TruckAddon>

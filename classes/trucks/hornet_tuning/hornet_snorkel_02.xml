@@ -1,0 +1,33 @@
+<TruckAddon>
+	<Snorkel Origin="(1.624; 1.288; 0)" />
+	
+	<PhysicsModel 
+		AcceptVisualDamage="false"
+		Mesh="trucks/tuning/afim_hornet_tuning" 
+		MeshFrame="afim_hornet_snorkel_02"
+	>
+		<Body 
+			Mass="5" 
+			ModelFrame="BoneAddons_cdt"
+		>
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	
+	<GameData
+		CameraPreset="side_r"
+		Category="snorkel"
+		Price="500"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_AFIM_HORNET_SNORKEL_02_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_AFIM_HORNET_SNORKEL_02_NAME"
+		/>
+		
+		<InstallSocket Type="HornetSnorkel" />
+	</GameData>
+</TruckAddon>

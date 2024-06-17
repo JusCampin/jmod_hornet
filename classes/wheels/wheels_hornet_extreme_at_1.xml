@@ -1,0 +1,81 @@
+<TruckWheels 
+	DamageCapacity="500"
+	Radius="1" 
+	Width="0.66"
+ >
+	<TruckTires>
+		<TruckTire
+			Mesh="wheels/tire_afim_hornet" 
+			Name="allterrain_4"
+			RearMassScale="1"
+			Mass="400"
+		>
+			<GameData
+				Price="3000"
+				UnlockByExploration="false"
+				AddonUnlockByObjective="false"
+				UnlockByRank="1"
+			>
+				<UiDesc 
+					UiDesc="UI_WHEEL_HORNET_DESC_EXTREME_AT_1" 
+					UiName="UI_WHEEL_HORNET_NAME_EXTREME_AT_1" 
+				/>
+			</GameData>
+			
+			<WheelTracks
+				TextureAlpha="tracks/default_alpha__s_d.tga"
+				TextureHeight="tracks/default_height__s_d.tga"
+			/>
+			
+			<WheelSoftness
+				RadiusOffset="0.02"
+				SoftForceScale="0.32"
+			/>
+			
+			<WheelFriction
+				BodyFriction="7.0"
+				BodyFrictionAsphalt="7.1"
+				SubstanceFriction="6.8"
+				UiName="UI_TIRE_TYPE_ALLTERRAIN_NAME"
+			/>
+			
+			<TiresInflationSystemSettings>
+				<Low
+					OnModelFriction="1.7"
+					BodyFrictionAsphalt="1.6"
+					SubstanceFriction="1.6"
+					FuelConsumptionModifier="1.5"
+					SteeringSpeedModifier="0.7"
+					AdditionalRadiusOffset="0.1"
+					>
+				</Low>
+				
+				<Reduced
+					OnModelFriction="1.5"
+					BodyFrictionAsphalt="1.4"
+					SubstanceFriction="1.4"
+					FuelConsumptionModifier="1.25"
+					SteeringSpeedModifier="0.85"
+					AdditionalRadiusOffset="0.05"
+					>
+				</Reduced>
+			</TiresInflationSystemSettings>
+		</TruckTire>
+	</TruckTires>
+	
+	<TruckRims>
+		<TruckRim 
+			Mesh="wheels/rim_afim_hornet" 
+			Mass="500"
+			Name="rim_1"
+		>
+			<GameData>
+				<UiDesc 
+					UiDesc="UI_RIM_AFIM_HORNET_1_DESC" 
+					UiName="UI_RIM_AFIM_HORNET_1_NAME" 
+				/>
+			</GameData>
+		</TruckRim>
+	</TruckRims>
+</TruckWheels>
+

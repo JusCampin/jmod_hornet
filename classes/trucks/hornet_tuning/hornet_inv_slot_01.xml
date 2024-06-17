@@ -1,0 +1,34 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<PhysicsModel 
+		AcceptVisualDamage="false"
+		Mesh="trucks/tuning/afim_hornet_tuning" 
+		MeshFrame="afim_hornet_inv_slot_01"
+	>
+		<Body 
+			ImpactType="Truck" 
+			Mass="10" 
+			ModelFrame="BoneInvSlot01_cdt"
+		>
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	
+	<GameData
+		CameraPreset="rear"
+		Category="rear"
+		Price="500"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+		AddonUnlockByObjective="false"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_AFIM_HORNET_INV_SLOT_01_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_AFIM_HORNET_INV_SLOT_01_NAME"
+		/>
+		
+		<InstallSocket Type="HornetInvSlot01" />
+	</GameData>
+</TruckAddon>

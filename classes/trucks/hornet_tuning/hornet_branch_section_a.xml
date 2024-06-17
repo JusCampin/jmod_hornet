@@ -1,0 +1,50 @@
+<_templates Include="trucks">
+	<Body>
+		<Limits Collisions="None" Mass="1">
+			<Constraint LinearLimitsY="(-0.05; 0.05)" LinearLimitsZ="(-0.05;0.05)" Type="Fixed">
+				<Motor Damping="0.1" Spring="700" Type="Spring" />
+			</Constraint>
+		</Limits>
+	</Body>
+</_templates>
+
+<TruckAddon>
+	<PhysicsModel 
+		AcceptVisualDamage="false" 
+		Mesh="trucks/tuning/afim_hornet_tuning" 
+		MeshFrame="afim_hornet_branch_section_a"
+	>
+		<Body 
+			Collisions="None" 
+			Mass="0.1" 
+			ModelFrame="BoneAddons_cdt"
+		>
+			<Constraint Type="Rigid" />
+			
+			<Body _template="Limits" ModelFrame="BoneStringLeft_cdt" />
+			<Body _template="Limits" ModelFrame="BoneStringRight_cdt" />
+		</Body>
+	</PhysicsModel>
+	
+	<GameData
+		CameraPreset="default"
+		Category="fender_front"
+		IsCustomizable="false"
+		Price="250"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_BRANCH_SECTION_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_BRANCH_SECTION_NAME"
+		/>
+		
+		<InstallSocket Type="HornetBranchSection" />
+		
+		<RequiredAddon Types="hornet_front_bumper_01" />
+		
+		<RequiredAddon Types="hornet_roofrack_01" />
+	</GameData>
+</TruckAddon>

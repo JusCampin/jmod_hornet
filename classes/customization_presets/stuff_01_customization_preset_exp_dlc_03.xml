@@ -1,0 +1,7 @@
+<_templates Include="trucks" />
+<TruckSet>
+	<Truck _template="OutsideSticker1x1" Name="sticker_door_l_1x1_hornet" />
+	<Truck _template="OutsideSticker1x1" Name="sticker_door_r_1x1_hornet" />
+	<Truck _template="OutsideSticker1x1" Name="sticker_hood_01_1x1_hornet" />
+	<Truck _template="OutsideSticker1x1" Name="sticker_roof_01_1x1_hornet" />
+</TruckSet>

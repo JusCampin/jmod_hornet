@@ -1,0 +1,25 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<TruckData
+		RepairsCapacity="1000"
+		WheelRepairsCapacity="2"
+		FuelCapacity="284"
+	/>
+	<PhysicsModel _template="Invisible" />
+	<GameData
+		CameraPreset="default"
+		Category="miscellenious"
+		IsEmergencyReserveAddon="true"
+		Price="1000"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_ESTOCK_HORNET_DESC_SMALL"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_ESTOCK_HORNET_NAME_SMALL"
+		/>
+		<InstallSocket Type="hornet_estock" />
+	</GameData>
+</TruckAddon>

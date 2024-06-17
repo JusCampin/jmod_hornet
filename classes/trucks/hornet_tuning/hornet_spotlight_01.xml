@@ -1,0 +1,42 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<PhysicsModel 
+		AcceptVisualDamage="false"
+		Mesh="trucks/tuning/afim_hornet_tuning" 
+		MeshFrame="afim_hornet_spotlight_01"
+	>
+		<Body Mass="2">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	
+	<ModelAttachments _noinherit="true">
+		<MainHeadLight>
+			<Model _template="HeadLightRay" Org="(0.432; 1.892; -0.185)" />
+			<Model _template="HeadLightRay" Org="(0.432; 1.892; 0.185)" />
+			<Flare _template="HeadLight" DirAngle="135" Size=".5" Pos="(0.432; 1.892; -0.185)" />
+			<Flare _template="HeadLight" DirAngle="135" Size=".5" Pos="(0.432; 1.892; 0.185)" />
+		</MainHeadLight>
+	</ModelAttachments>
+	
+	<MainHeadLight _template="Multiply2" AttenEnd="75"/>
+	
+	<GameData
+		CameraPreset="roof"
+		Category="top"
+		Price="200"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_OUTERFRAME_SPOTLIGHT_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_OUTERFRAME_SPOTLIGHT_NAME"
+		/>
+		
+		<InstallSocket Type="HornetSpotlightFrame" />
+		
+		<RequiredAddon Types="hornet_roofrack_01" />
+	</GameData>
+</TruckAddon>

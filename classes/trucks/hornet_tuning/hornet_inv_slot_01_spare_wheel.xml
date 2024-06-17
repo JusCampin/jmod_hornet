@@ -1,0 +1,42 @@
+<TruckAddon>
+	<TruckData WheelRepairsCapacity="2" />
+	
+	<WheelRepairsHide>
+		<Mesh Frame="afim_hornet_inv_slot_01_spare_wheel" HideThreshold="0.0" />
+	</WheelRepairsHide>
+	
+	<PhysicsModel 
+		AcceptVisualDamage="false"  
+		Mesh="trucks/tuning/afim_hornet_tuning" 
+		MeshFrame="afim_hornet_inv_slot_01_spare_wheel"
+	>
+		<Body 
+			ImpactType="Truck" 
+			Mass="20" 
+			ModelFrame="BoneInvSlot01_cdt"
+		>
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	
+	<GameData
+		CameraPreset="supplies_rear"
+		Category="miscellenious"
+		IsCustomizable="false"
+		IsConsumable="true"
+		Price="500"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_INV_SLOT_WHEEL_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_INV_SLOT_WHEEL_NAME"
+		/>
+		
+		<RequiredAddon Types="hornet_inv_slot_01" />
+		
+		<InstallSocket Type="HornetInvSlot01Wheel01" />
+	</GameData>
+</TruckAddon>

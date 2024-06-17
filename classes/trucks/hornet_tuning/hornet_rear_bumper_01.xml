@@ -1,0 +1,61 @@
+<_templates Include="trucks">
+	<Body>
+		<Hitch Collisions="None" Mass="2">
+			<Constraint
+				AxisLocal="(0; 0; -1)"
+				Type="Hinge"
+				MinLimit="-35"
+				MaxLimit="70"
+			>
+				<Motor Type="Spring" Damping="0.08" Spring="0" />
+			</Constraint>
+		</Hitch>
+	</Body>
+</_templates>
+
+<TruckAddon>
+	<TruckData>
+		<Damage>
+			<Multiplier Multiplier="0.01" Type="FuelTank" />
+			<Multiplier Multiplier="0.01" Type="Suspension" />
+		</Damage>
+	</TruckData>
+	
+	<PhysicsModel 
+		Mesh="trucks/tuning/afim_hornet_tuning" 
+		MeshFrame="afim_hornet_rear_bumper_01" 
+		AcceptVisualDamage="false"
+	>
+		<Body 
+			ImpactType="Truck" 
+			Mass="20" 
+			ModelFrame="BoneRearBumer01_cdt"
+		>
+			<Constraint Type="Rigid" />
+			
+			<Body _template="Hitch" ModelFrame="BoneHitchRearLeft_01_cdt" />	
+			<Body _template="Hitch" ModelFrame="BoneHitchRearRight_01_cdt" />	
+		</Body>
+	</PhysicsModel>
+	
+	<GameData
+		CameraPreset="rear"
+		Category="rear"
+		IsCustomizable="true"
+		Price="500"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<WinchSocket Pos="(-2.5; 0.453; -0.45)" ParentFrame="BoneRearBumer01_cdt" />
+		<WinchSocket Pos="(-2.5; 0.453; 0.45)" ParentFrame="BoneRearBumer01_cdt" />
+		
+		<UiDesc
+			UiDesc="UI_BUMPER_R_HORNET_DESC_1"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_AFIM_HORNET_REAR_BUMPER_01_NAME"
+		/>
+		
+		<InstallSocket Type="HornetRearBumper" />
+	</GameData>
+</TruckAddon>

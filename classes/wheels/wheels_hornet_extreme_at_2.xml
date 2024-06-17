@@ -1,0 +1,87 @@
+<TruckWheels
+	DamageCapacity="500" 
+	Radius="1" 
+	Width="0.66"
+	WidthRear="0.66"
+>
+	<TruckTires>
+		<TruckTire 
+			Mesh="wheels/tire_cotco_canyon" 
+			Name="allterrain_4"
+			RearMassScale="1"
+			Mass="400"
+		>
+			<GameData
+				Price="3000"
+				UnlockByExploration="false"
+				AddonUnlockByObjective="false"
+				UnlockByRank="1"
+			>
+				<UiDesc 
+					UiDesc="UI_WHEEL_HORNET_DESC_EXTREME_AT_2" 
+					UiName="UI_WHEEL_HORNET_NAME_EXTREME_AT_2" 
+				/>
+			</GameData>
+			
+			<WheelTracks
+				TextureAlpha="tracks/offroad_alpha__s_d.tga"
+				TextureHeight="tracks/offroad_height__s_d.tga"
+			/>
+			
+			<WheelTracks
+				Rear="true"
+				TextureAlpha="tracks/offroad_alpha__s_d.tga"
+				TextureHeight="tracks/offroad_height__s_d.tga"
+			/>
+			
+			<WheelSoftness
+				RadiusOffset="0.032"
+				SoftForceScale="0.20"
+			/>
+			
+			<WheelFriction
+				BodyFriction="7.0"
+				BodyFrictionAsphalt="7.0"
+				SubstanceFriction="6.9"
+				UiName="UI_TIRE_TYPE_ALLTERRAIN_NAME"
+			/>
+			
+			<TiresInflationSystemSettings>
+				<Low
+					OnModelFriction="1.6"
+					BodyFrictionAsphalt="1.5"
+					SubstanceFriction="1.5"
+					FuelConsumptionModifier="1.6"
+					SteeringSpeedModifier="0.8"
+					AdditionalRadiusOffset="0.10"
+					>
+				</Low>
+				
+				<Reduced
+					OnModelFriction="1.4"
+					BodyFrictionAsphalt="1.3"
+					SubstanceFriction="1.3"
+					FuelConsumptionModifier="1.25"
+					SteeringSpeedModifier="0.85"
+					AdditionalRadiusOffset="0.06"
+					>
+				</Reduced>
+			</TiresInflationSystemSettings>
+		</TruckTire>
+	</TruckTires>
+	
+	<TruckRims>
+		<TruckRim 
+			Mesh="wheels/rim_cotco_canyon"
+			Mass="500"
+			Name="rim_1"
+		>
+			<GameData>
+				<UiDesc 
+					UiDesc="UI_RIM_Cotco_Canyon_DESC" 
+					UiName="UI_RIM_Cotco_Canyon_NAME" 
+				/>
+			</GameData>
+		</TruckRim>
+	</TruckRims>
+</TruckWheels>

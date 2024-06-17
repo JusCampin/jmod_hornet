@@ -1,0 +1,43 @@
+<TruckAddon>
+	<TruckData FuelCapacity="15" />
+	
+	<FuelHide>
+		<Mesh Frame="afim_hornet_front_bumper_01_slot_01_fuel" HideThreshold="0.0" />
+	</FuelHide>
+	
+	<PhysicsModel 
+		AcceptVisualDamage="false" 
+		Mesh="trucks/tuning/afim_hornet_tuning" 
+		MeshFrame="afim_hornet_front_bumper_01_slot_01_fuel"
+	>
+		<Body  
+			Collisions="None" 
+			ImpactType="Truck" 
+			Mass="15" 
+			ModelFrame="BoneFrontBumper01_cdt"
+		>
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	
+	<GameData
+		CameraPreset="supplies_default"
+		Category="fender_front"
+		IsCustomizable="false"
+		IsConsumable="true"  
+		Price="200"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_BUMPER_FUEL_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_BUMPER_FUEL_NAME"
+		/>
+		
+		<RequiredAddon Types="hornet_front_bumper_01" />
+		
+		<InstallSocket Type="HornetFrontBumperSlot01" />
+	</GameData>
+</TruckAddon>

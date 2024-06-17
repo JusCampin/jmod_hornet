@@ -1,0 +1,74 @@
+<_templates Include="trucks">
+	<Body>
+		<Hitch Collisions="Default" Mass="10">
+			<Constraint
+				AxisLocal="(0; 0; 1)"
+				Type="Hinge"
+				MinLimit="0"
+				MaxLimit="-90"
+			/>
+		</Hitch>
+	</Body>
+</_templates>
+
+<TruckAddon>
+	<TruckData>
+		<Damage>
+			<Multiplier Multiplier="0.01" Type="FuelTank" />
+			<Multiplier Multiplier="0.01" Type="Suspension" />
+		</Damage>
+	</TruckData>
+	
+	<PhysicsModel 
+		Mesh="trucks/tuning/afim_hornet_tuning" 
+		MeshFrame="afim_hornet_rear_default"
+		AcceptVisualDamage="false"
+	>
+		<Body 
+			ImpactType="Truck" 
+			Mass="20" 
+			ModelFrame="BoneRearBumerDefault_cdt" 
+		>
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	
+	<ModelAttachments>
+		<StopSignals>
+			<Flare _template="StopSignal" DirAngle="180" Size="0.4" Pos="(-2.44; 0.544; -0.452)" />
+			<Flare _template="StopSignal" DirAngle="180" Size="0.4" Pos="(-2.44; 0.544; 0.452)" />
+		</StopSignals>
+		
+		<ReverseSignals>
+			<Flare _template="ReverseSignal" Pos="(-2.453; 0.544; 0.625)" Color="g(255; 255; 255) x 1" Size="0.7"/>
+			<Flare _template="ReverseSignal" Pos="(-2.453; 0.544; -0.625)" Color="g(255; 255; 255) x 1" Size="0.7"/>
+		</ReverseSignals>
+		
+		<Ignition>
+			<Flare _template="StopSignal" Size="0.2" Pos="(-2.44; 0.544; -0.452)" />
+			<Flare _template="StopSignal" Size="0.2" Pos="(-2.44; 0.544; 0.452)" />
+			<Light _template="IgnitionSignalWhite" Pos="(2.115; 0.506; 0.654)" Color="g(255; 245; 215) x 1"/>
+			<Light _template="IgnitionSignalWhite" Pos="(2.115; 0.506; 0.654)" Color="g(255; 245; 215) x 1"/>
+		</Ignition>
+	</ModelAttachments>
+	
+	<GameData
+		CameraPreset="rear"
+		Category="rear"
+		IsCustomizable="true"
+		Price="100"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<WinchSocket Pos="(-2.486; 0.453; 0.0)" ParentFrame="BoneRearBumerDefault_cdt" />
+		
+		<UiDesc
+			UiDesc="UI_BUMPER_R_HORNET_DESC_0"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_REAR_BUMPER_STOCK_NAME"
+		/>
+		
+		<InstallSocket Type="HornetRearBumper" />
+	</GameData>
+</TruckAddon>

@@ -1,0 +1,42 @@
+<TruckAddon>
+	<TruckData RepairsCapacity="50" />
+	
+	<RepairsHide>
+		<Mesh Frame="afim_hornet_inv_slot_01_repair_a" HideThreshold="0.0" />
+	</RepairsHide>
+	
+	<PhysicsModel 
+		AcceptVisualDamage="false" 
+		Mesh="trucks/tuning/afim_hornet_tuning" 
+		MeshFrame="afim_hornet_inv_slot_01_repair_a"
+	>
+		<Body 
+			ImpactType="Truck" 
+			Mass="15" 
+			ModelFrame="BoneInvSlot01_cdt"
+		>
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	
+	<GameData
+		CameraPreset="supplies_rear"
+		Category="miscellenious"
+		IsCustomizable="false"
+		IsConsumable="true"  
+		Price="200"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_INV_SLOT_REPAIR_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_INV_SLOT_REPAIR_NAME"
+		/>
+		
+		<RequiredAddon Types="hornet_inv_slot_01" />
+		
+		<InstallSocket Type="HornetInvSlot01_A" />
+	</GameData>
+</TruckAddon>
